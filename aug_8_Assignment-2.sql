@@ -1,0 +1,51 @@
+--assignment-2--
+
+--1-- 
+
+create table customer
+(
+customer_id INT,
+first_name VARCHAR(50),
+last_name VARCHAR(50),
+email VARCHAR(50),
+address VARCHAR(50),
+city VARCHAR(20),
+state VARCHAR(30),
+zip INT
+)
+
+--2--
+
+INSERT INTO CUSTOMER VALUES
+	  (10,'JEMMI','JORDAN','JEM@GMAIL.COM','2ND FLOOR GANDHI NAGAR','SANJOSE','KARNATAKA','33222'),
+	  (20,'GAGANA','AVANTHIKA','GAGANA@GMAIL.COM','3ND FLOOR JAYA NAGAR','SHANTI NAGAR','KASHMIR','22222'),
+	  (30,'JESSICA','VANYA','VANYA@GMAIL.COM','19TH BLOCK BOMMARI','ALLEPPY','TAMIL NADU','33333'),
+	  (40,'JERUSHA','JERU','JERU@GMAIL.COM','4TH FLOOR','OOTY','DELHI','44444'),
+	  (50,'GRACE','ZIPPORA','GRACE@GMAIL.COM','5TH FLOOR','SAN JOSE','UTTAR PRADESH','55555');
+
+SELECT * FROM customer
+
+--3--
+
+SELECT FIRST_NAME,LAST_NAME 
+FROM customer
+
+--4- 
+
+
+SELECT * 
+FROM customer
+WHERE first_name LIKE 'g%' AND CITY ='SAN JOSE'
+
+
+--5--
+
+SELECT *
+FROM customer
+WHERE EMAIL LIKE '%GMAIL%'
+
+--6--
+
+SELECT * 
+FROM customer
+WHERE last_name NOT LIKE '%A'
